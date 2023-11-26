@@ -16,16 +16,16 @@ class PokeRepositoryImpl @Inject constructor (val service: PokeService) : PokeRe
             if (response.isSuccessful) {
                 response.body()?.let {
                     return@let Resource.success(it)
-                } ?: Resource.error("Body boş geldi!",null)
+                } ?: Resource.error("Body is empty",null)
             } else {
-                Resource.error("Response successful değil!",null)
+                Resource.error("Response is not successful",null)
             }
         }
         catch (e: CancellationException){
             throw e
         }
         catch (e: Exception) {
-            Resource.error("Bütün olay patladı!",null)
+            Resource.error("Error",null)
         }
     }
 
@@ -36,16 +36,16 @@ class PokeRepositoryImpl @Inject constructor (val service: PokeService) : PokeRe
             if (response.isSuccessful) {
                 response.body()?.let {
                     return@let Resource.success(it)
-                } ?: Resource.error("Body boş geldi!",null)
+                } ?: Resource.error("Body is empty", null)
             } else {
-                Resource.error("Response successful değil!",null)
+                Resource.error("Response is not successful", null)
             }
         }
         catch (e: CancellationException){
             throw e
         }
         catch (e: Exception) {
-            Resource.error("Bütün olay patladı!",null)
+            Resource.error("Error",null)
         }
     }
 
@@ -55,12 +55,12 @@ class PokeRepositoryImpl @Inject constructor (val service: PokeService) : PokeRe
             if (response.isSuccessful) {
                 response.body()?.let {
                     return@let Resource.success(it)
-                } ?: Resource.error("Body boş geldi!",null)
+                } ?: Resource.error("Body is empty",null)
             } else {
-                Resource.error("Response successful değil!",null)
+                Resource.error("Response is not successful",null)
             }
         } catch (e: Exception) {
-            Resource.error("Bütün olay patladı!",null)
+            Resource.error("Error",null)
         }
     }
 }
